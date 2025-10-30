@@ -1,0 +1,104 @@
+:root {
+    --bg-light: #fafafa;
+    --bg-dark: #121212;
+    --text-light: #1e1e1e;
+    --text-dark: #ffffff;
+    --accent: #e67e22;
+}
+
+.gallery-section {
+    padding: 80px 20px;
+    text-align: center;
+
+    transition: background 0.4s, color 0.4s;
+}
+
+body.dark .gallery-section {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.gallery-header h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.gallery-header p {
+    color: #777;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.view-more {
+    margin-top: 50px;
+}
+
+.view-more a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent);
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.view-more a:hover {
+    background-color: #cf6d19;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,76 @@
+.hero-section {
+    margin-top: 80px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 480px) {
+    .hero-section {
+        height: auto; /* Ensure it doesn't overflow */
+        
+    }
+}
+
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: brightness(100%) contrast(115%) sepia(15%) saturate(120%) hue-rotate(0deg);
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-image {
+        height: auto; /* Allow the height to adjust dynamically */
+        
+    }
+}
+
+/* Adjustments for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+    .hero-image {
+        height: auto; /* Ensure it doesn't overflow */
+        
+    }
+}
+.hero-text {
+    position: absolute;
+    bottom: 6%;
+    left: 10%;
+    color: #ffffff;
+    background: rgba(32, 32, 32, 0.461);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    max-width: 80%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .hero-text {
+        bottom: 10%; /* Adjust position for smaller screens */
+        left: 5%; /* Reduce left margin */
+        max-width: 90%; /* Allow more width for text */
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        bottom: 5%; /* Further adjust position */
+        left: 5%; /* Keep consistent left margin */
+        max-width: 95%; /* Allow full width for text */
+        padding: 0.5rem 0.8rem; /* Further reduce padding */
+    }
+}
+
+.hero-text h1 {
+   font-size: clamp(1.6rem, 6vw, 2.5rem); /* Responsive font size */
+    margin-bottom: 0.5rem;
+}
+.hero-text p {
+    font-size: clamp(1rem, 4vw, 1.2rem); /* Responsive font size for paragraph */
+    line-height: 1.5;
+}

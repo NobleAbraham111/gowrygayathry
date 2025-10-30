@@ -1,0 +1,59 @@
+.faculty-page {
+  padding: 4rem 1.5rem;
+  background: var(--page-bg, #fdfbf6);
+  color: var(--text-color, #1c1c1c);
+  transition: background 0.4s, color 0.4s;
+}
+
+body.dark-theme .faculty-page {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+.faculty-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faculty-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: var(--heading-color, #243d7a);
+}
+
+.faculty-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-muted, #555);
+  font-size: 1.1rem;
+}
+
+body.dark-theme .faculty-header h1 {
+  color: #d4af37;
+}
+
+.founders-section{
+    margin-bottom: 4rem;
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+}
+.keypersons-section{
+    margin-bottom: 4rem;
+   
+    gap: 40px;
+    justify-content: center;
+}
+.faculty-section {
+  margin-bottom: 4rem;
+    
+    justify-content: center;
+  
+}
+
+.faculty-grid {
+  display: grid;
+    
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}

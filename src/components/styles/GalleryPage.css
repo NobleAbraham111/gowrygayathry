@@ -1,0 +1,227 @@
+/* GalleryPage.css
+   - Uses CSS variables from global theme; supports body.dark-theme
+   - Place this file in src/styles/ and import from GalleryPage.jsx
+*/
+
+/* Base variables (light defaults) */
+:root {
+    --bg: #fbf8f2;
+    /* page bg */
+    --card-bg: #fff;
+    /* tile bg */
+    --text: #262626;
+    --muted: #666;
+    --accent: #d4a84f;
+    /* gold */
+    --hero-bg: linear-gradient(135deg, #f7f3eb 0%, #fffaf0 100%);
+    --tile-shadow: rgba(36, 61, 122, 0.08);
+}
+
+/* Dark theme overrides */
+body.dark-theme {
+    --bg: #0f1115;
+    --card-bg: #121316;
+    --text: #eee8dc;
+    --muted: #cfc3ae;
+    --accent: #c59c45;
+    --hero-bg: linear-gradient(135deg, #0b1220 0%, #16181b 100%);
+    --tile-shadow: rgba(0, 0, 0, 0.55);
+}
+
+/* Page layout */
+.gallery-page {
+    background: var(--bg);
+    min-height: 100vh;
+    color: var(--text);
+    transition: background 0.4s ease, color 0.4s ease;
+    padding-bottom: 4rem;
+    margin-top: 50px;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* HERO */
+.gallery-hero {
+    padding: 3rem 1.25rem;
+    text-align: center;
+    background: var(--hero-bg);
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.gallery-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    margin: 0 0 .6rem;
+    color: var(--text);
+}
+
+.hero-sub {
+    color: var(--muted);
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sections */
+.gallery-sections {
+    padding: 1rem 4%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-section {
+    margin-bottom: 3.5rem;
+}
+
+/* Section header */
+.section-header {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+    color: var(--text);
+}
+
+.section-header p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Masonry-like grid */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+/* Tile */
+.gallery-tile {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px var(--tile-shadow);
+    transform-origin: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Horizontal slider tile uses the same tile class with modified sizing */
+.horizontal-tile {
+    min-width: 320px;
+    max-width: 360px;
+    margin-right: 0.8rem;
+    flex: 0 0 auto;
+}
+
+/* image */
+.gallery-tile img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery-tile:hover img {
+    transform: scale(1.03);
+}
+
+.gallery-tile figcaption {
+    padding: 0.8rem 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Horizontal slider container */
+.horizontal-slider {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.6rem 0.2rem;
+    margin: 0.6rem 0;
+    cursor: grab;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* CTA Section */
+.gallery-cta {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(212, 168, 79, 0.08), rgba(36, 61, 122, 0.02));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-cta h3 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.gallery-cta p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--accent), #243D7A);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(36, 61, 122, 0.18);
+}
+
+/* Responsive changes */
+@media (max-width: 900px) {
+    .gallery-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .masonry-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .gallery-tile img {
+        height: 180px;
+    }
+
+    .horizontal-tile {
+        min-width: 260px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-hero {
+        padding: 2rem 1rem;
+    }
+
+    .gallery-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .masonry-grid {
+        gap: 0.8rem;
+    }
+
+    .gallery-tile img {
+        height: 150px;
+    }
+}

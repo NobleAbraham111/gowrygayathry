@@ -1,0 +1,182 @@
+.faculty-section {
+    padding: 4rem 1rem;
+    background: #fafafa;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faculty-slider-wrapper {
+    overflow: hidden;
+    margin: 0 60px;
+}
+
+.faculty-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #21336c;
+    transition: color 0.3s ease;
+}
+
+.faculty-slider {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.faculty-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.5rem;
+    width: 260px;
+    min-width: 260px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.faculty-card:hover {
+    border: 1px solid #C49A4A;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, rgba(28, 58, 99, 0.05), rgba(196, 154, 74, 0.05));
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+.faculty-card:hover img {
+    transform: scale(1.05);
+}
+
+.faculty-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.2rem auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.faculty-card h4 {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #131247;
+    transition: color 0.3s ease;
+}
+
+.faculty-card p {
+    font-size: 0.85rem;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+/* Mobile Optimized */
+@media (max-width: 768px) {
+    .faculty-card {
+        width: 200px;
+        min-width: 200px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .faculty-card img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Dark theme */
+body.dark-theme .faculty-section {
+    background: #000000;
+}
+
+body.dark-theme .faculty-heading {
+    color: #d4a84f;
+}
+
+body.dark-theme .faculty-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 4px 20px rgba(212, 168, 79, 0.2);
+}
+
+body.dark-theme .faculty-card:hover {
+    border-color: #d4a84f;
+    box-shadow: 0 8px 25px rgba(212, 168, 79, 0.4);
+    background: #252525;
+}
+
+body.dark-theme .faculty-card h4 {
+    color: #d4a84f;
+}
+
+body.dark-theme .faculty-card p {
+    color: #ffffff;
+}
+
+/* Slider Buttons with Glass Effect */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: #243d7a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.slider-btn:active:not(:disabled) {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.slider-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.slider-btn-left {
+    left: 0;
+}
+
+.slider-btn-right {
+    right: 0;
+}
+
+/* Dark theme for buttons */
+body.dark-theme .slider-btn {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #d4a84f;
+}
+
+body.dark-theme .slider-btn:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.5);
+}

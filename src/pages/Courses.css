@@ -1,0 +1,51 @@
+/* src/styles/Courses.css */
+
+.courses-page {
+  margin-top: 50px;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #fdf8f2, #f2ecdc);
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.courses-heading {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #243d7a;
+  margin-bottom: 3rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.courses-heading::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: #d4a84f;
+  display: block;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Responsive & legacy color integration */
+@media (max-width: 768px) {
+  .courses-page {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Dark theme */
+body.dark-theme .courses-page {
+  background: #000000;
+}
+
+body.dark-theme .courses-heading {
+  color: #d4a84f;
+}

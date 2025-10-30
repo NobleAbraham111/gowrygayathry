@@ -1,0 +1,82 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  position: relative;
+  background: rgb(255, 255, 255);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #555;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+.popup-box h3 {
+  margin-bottom: 20px;
+  color: #0e7821;
+  font-weight: bold;
+}
+
+.popup-box p {
+  color: #383838;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.popup-box section {
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-left: 71px;
+  width: 190px;
+  font-size: 10px;
+}
+
+/* Dark theme */
+body.dark-theme .popup-box {
+  background: rgb(30, 30, 30);
+  border: 1px solid #d4a84f;
+  box-shadow: 0 4px 25px rgba(212, 168, 79, 0.3);
+}
+
+body.dark-theme .close-btn {
+  color: #d4a84f;
+}
+
+body.dark-theme .close-btn:hover {
+  color: #ffffff;
+}
+
+body.dark-theme .popup-box h3 {
+  color: #d4a84f;
+}
+
+body.dark-theme .popup-box p {
+  color: #ffffff;
+}
