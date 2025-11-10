@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-function PhotoCard({ photo }) {
+function PhotoCard({ name, title, image, description, isFounder }) {
     return (
         <motion.div
-            className="photo-card"
+            className={`photo-card ${isFounder ? 'founder-card' : ''}`}
             // starting state (invisible & slightly shifted down)
             initial={{ opacity: 0, y: 50 }}
             // when the card enters the viewport
@@ -13,8 +13,10 @@ function PhotoCard({ photo }) {
             // smooth “liquid” feel
             transition={{ type: "spring", stiffness: 80, damping: 15 }}
         >
-            <img src={photo.src} alt={photo.alt} loading="lazy" />
-            {photo.title && <h4>{photo.title}</h4>}
+            <img src={image} alt={name} loading="lazy" />
+            <h4>{name}</h4>
+            <p className="card-title">{title}</p>
+            <p className="card-description">{description}</p>
         </motion.div>
     );
 }

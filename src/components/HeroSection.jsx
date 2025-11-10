@@ -6,6 +6,7 @@ import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/HeroSection.css";
 
+
 const HeroSection = memo(() => {
     const { ref, opacity, scale, y } = useScrollAnimation();
 
@@ -15,11 +16,11 @@ const HeroSection = memo(() => {
             style={{ opacity, scale, y }}
             className="hero-section"
             variants={fadeInVariants}
-            initial="hidden"
+            initial="visible"
             animate="visible"
         >
             <LazyImage
-                src="/assets/images/herosection.png"
+                src="src/assets/images/11dance.png"
                 alt="School of Music and Dance"
                 className="hero-image"
             />
@@ -36,15 +37,16 @@ const HeroSection = memo(() => {
                     animate="visible"
                     transition={{ delay: 0.5 }}
                 >
-                    Gowry Gayathri Vidyapeedom
+                    School Of Music and Dance
+
                 </motion.h1>
                 <motion.h2
                     variants={fadeInVariants}
                     initial="hidden"
                     animate="visible"
                     transition={{ delay: 0.7 }}
-                >
-                    School Of Music and Dance
+                >Learning Today , Leading Tomorrow
+
                 </motion.h2>
                 <motion.div
                     variants={fadeInVariants}
@@ -67,7 +69,7 @@ const HeroSection = memo(() => {
                             whileTap="tap"
                             aria-label="Find our courses"
                         >
-                            Find Our Courses
+                            Find Courses
                         </motion.button>
                     </Link>
                 </motion.div>

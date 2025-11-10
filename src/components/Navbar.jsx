@@ -13,7 +13,7 @@ const Navbar = memo(() => {
     const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY;
 
-        if (currentScrollY > lastScrollY && currentScrollY > 150) {
+        if (currentScrollY > lastScrollY && currentScrollY > 50) {
             // User is scrolling down and has scrolled past 50px
             setIsVisible(false);
         } else {
@@ -50,8 +50,8 @@ const Navbar = memo(() => {
             <div className="nav-container">
                 {/* Logo / Brand */}
                 <Link to="/" className="logo">
-                    <LazyImage
-                        src="/assets/images/reallogo.jpg"
+                    <img
+                        src="src/assets/images/reallogo.jpg"
                         alt="GowryGayathry logo"
                         className="logo-image"
                     />

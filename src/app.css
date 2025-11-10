@@ -1,9 +1,16 @@
+@font-face {
+  font-family: fontsGGVP;
+  src: url('/fonts/Festive-Regular.ttf') format('truetype');
+}
+
 body {
     background-color: #FFFAF0;
     margin: 0;
+    padding: 0;
     font-family: sans-serif;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
 }
 
 p {
@@ -48,6 +55,27 @@ footer {
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 768px) {
+    html, body {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+    }
 }
 
 /* Scroll to Top Button */
@@ -205,4 +233,11 @@ body.dark-theme *:focus-visible {
     .scroll-to-top {
         border: 2px solid currentColor;
     }
+}
+.hero-text h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem); /* Responsive font size */
+    margin-bottom: 1rem;
+    color: var(--heading-color, #d4a84f);
+    
+    transition: color 0.4s;
 }

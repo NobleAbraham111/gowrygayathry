@@ -57,3 +57,72 @@ body.dark-theme .faculty-header h1 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
+.photo-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.photo-card h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #243d7a;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  color: #d4a84f;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.founder-card {
+  border: 2px solid #d4a84f;
+  background: linear-gradient(135deg, #fdfbf6 0%, #f9f6e8 100%);
+}
+
+body.dark-theme .photo-card {
+  background: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .photo-card h4 {
+  color: #d4af37;
+}
+
+body.dark-theme .card-title {
+  color: #f1c40f;
+}
+
+body.dark-theme .card-description {
+  color: #ccc;
+}
+
+body.dark-theme .founder-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-color: #d4af37;
+}

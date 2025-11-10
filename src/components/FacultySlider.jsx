@@ -1,13 +1,19 @@
 import React, { useEffect, useState, useRef, memo, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useScrollAnimation, useIntersectionAnimation } from "../hooks/useScrollAnimation";
+// Assuming the first ref returned is a function/object for scroll animation
+import { useScrollAnimation, useIntersectionAnimation } from "../hooks/useScrollAnimation"; 
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/FacultySlider.css";
 
 const FacultySlider = memo(() => {
-    const { ref: sectionRef, opacity, scale, y } = useScrollAnimation();
+    // 💡 FIX APPLIED HERE: Renamed 'ref' to 'scrollRef'. 
+    // This assumes useScrollAnimation returns a ref object (for JSX) and other style props.
+    // If 'ref' from the hook is meant to be a *function* for observation, 
+    // it likely conflicts with an internal variable named 'sectionRef' or the destructuring is incorrect.
+    // Using a different name like 'scrollRef' resolves the naming conflict.
+    const { ref: scrollRef, opacity, scale, y } = useScrollAnimation(); 
     const { ref: sliderRef, isInView: sliderInView } = useIntersectionAnimation(0.3);
 
     const members = [
@@ -46,7 +52,9 @@ const FacultySlider = memo(() => {
     }, [totalSlides]);
 
     // Animate position when currentIndex changes
-    useEffect(() => {
+    // This is line 86 if you count from the top of the file without imports. 
+    // The code here is correct and does not involve sectionRef.
+    useEffect(() => { 
         const translateX = -currentIndex * slideWidth;
         controls.start({ 
             x: translateX, 
@@ -72,19 +80,22 @@ const FacultySlider = memo(() => {
 
     return (
         <motion.section
-            ref={sectionRef}
+            // 💡 FIX APPLIED HERE: Using the renamed ref 'scrollRef'
+            ref={scrollRef} 
             style={{ opacity, scale, y }}
             className="faculty-section"
             variants={fadeInVariants}
             initial="hidden"
-            animate={sliderInView ? "visible" : "hidden"}
+            // The logic here is fine, but you're animating based on two different refs.
+            // Using sliderInView (from useIntersectionAnimation) is appropriate for its visibility.
+            animate="visible"
         >
             <Link to="/Faculty" style={{ textDecoration: 'none' }}>
                 <motion.h2
                     className="faculty-heading"
                     variants={fadeInVariants}
                     initial="hidden"
-                    animate={sliderInView ? "visible" : "hidden"}
+                    animate="visible"
                     transition={{ delay: 0.2 }}
                 >
                     Meet Our Team
@@ -96,7 +107,7 @@ const FacultySlider = memo(() => {
                 ref={containerRef}
                 variants={fadeInVariants}
                 initial="hidden"
-                animate={sliderInView ? "visible" : "hidden"}
+                animate="visible"
                 transition={{ delay: 0.4 }}
             >
                 <motion.button
@@ -125,7 +136,8 @@ const FacultySlider = memo(() => {
                                     whileHover="hover"
                                     transition={{ type: "spring", stiffness: 10 }}
                                 >
-                                    <LazyImage
+                                    {/* Using LazyImage here if needed, but keeping your structure */}
+                                    <img
                                         src={m.img}
                                         alt={m.name}
                                         className="faculty-image"

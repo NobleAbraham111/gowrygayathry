@@ -3,7 +3,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 // src/pages/Faculty.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import FacultyCard from "../components/FacultyCard";
+import PhotoCard from "../components/PhotoCard";
 import FacultySlider from "../components/FacultySlider";
 import "../components/styles/facultyPage.css";
 
@@ -103,7 +103,7 @@ function FacultyPage() {
       {/* Founders Section */}
       <section className="founders-section">
         {founders.map((f, index) => (
-          <FacultyCard key={index} {...f} />
+          <PhotoCard key={index} {...f} />
         ))}
       </section>
 
@@ -117,7 +117,7 @@ function FacultyPage() {
         <h2>Key Figures</h2>
         <div className="faculty-grid">
           {keyPersons.map((f, index) => (
-            <FacultyCard key={index} {...f} />
+            <PhotoCard key={index} {...f} />
           ))}
         </div>
       </motion.section>
@@ -132,7 +132,7 @@ function FacultyPage() {
         <h2>Our Teaching Faculty</h2>
         <div className="faculty-grid">
           {facultyMembers.map((f, index) => (
-            <FacultyCard key={index} {...f} />
+            <PhotoCard key={index} {...f} />
           ))}
         </div>
         <section>

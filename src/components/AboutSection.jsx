@@ -33,7 +33,7 @@ const AboutSection = memo(() => {
                 }}
                 src="/assets/videos/GG-landscape.mp4"
                 className="about-video"
-                autoPlay={false}
+                autoPlay={true}
                 loop
                 muted
                 playsInline
