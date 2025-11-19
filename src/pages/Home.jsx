@@ -8,9 +8,9 @@ import AboutSection from "../components/AboutSection";
 import LazyImage from "../components/LazyImage";
 import { pageVariants, pageTransition, staggerContainerVariants, staggerItemVariants, hoverVariants } from "../animations/variants";
 import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
-
-
+import FacultyPage from "../pages/FacultyPage"
 import GallerySection from "../components/GallerySection";
+import Courses from "./Courses";
 
 const Home = () => {
   return (
@@ -18,8 +18,12 @@ const Home = () => {
       <PopupMessage />
       <HeroSection />
       <AboutSection />
+      <Courses/>
       <FacultySlider />
+      <FacultyPage/>
       <GallerySection />
+      
+      
       <WhatsAppButton number="+919446560812" message="Hello, I want to know more about the courses" />
     </>
   );

@@ -36,7 +36,7 @@ const Footer = memo(() => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            🎨 Gowry Gayathri Vidyapeedom
+          Gowry Gayathri Vidyapeedom
           </motion.h3>
           <motion.p
             variants={fadeInVariants}
@@ -46,7 +46,7 @@ const Footer = memo(() => {
             transition={{ delay: 0.2 }}
           >
             Inspiring creativity and nurturing artistic talent since 2009.
-            Visit our gallery or reach out for admission and exhibition details.
+            Visit our gallery or reach out for admission.
           </motion.p>
         </motion.div>
 
@@ -81,7 +81,7 @@ const Footer = memo(() => {
             whileHover="hover"
             whileTap="tap"
           >
-            <FaWhatsapp /> Message us on WhatsApp
+            <FaWhatsapp /> Connect with us On WhatsApp
           </motion.a>
         </motion.div>
 
@@ -162,16 +162,7 @@ const Footer = memo(() => {
         transition={{ delay: 0.6 }}
       >
         <p>© {new Date().getFullYear()} Gowry Gayathri Vidyapeedom. All rights reserved.</p>
-        <motion.button
-          className="back-to-top"
-          onClick={scrollToTop}
-          variants={hoverVariants}
-          whileHover="hover"
-          whileTap="tap"
-          aria-label="Back to top"
-        >
-          <FaArrowUp />
-        </motion.button>
+        
       </motion.div>
     </motion.footer>
   );

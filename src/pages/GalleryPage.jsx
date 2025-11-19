@@ -104,7 +104,11 @@ export default function GalleryPage() {
       {/* SECTIONS */}
       <div className="gallery-sections">
         {SECTIONS.map((section, idx) => (
-          <section key={section.key} className="gallery-section">
+          <motion.section
+            key={section.key}
+            className="gallery-section"
+            style={{ '--section-index': idx }}
+          >
             <motion.div
               className="section-header"
               initial="hidden"
@@ -136,6 +140,7 @@ export default function GalleryPage() {
                     variants={imageVariant}
                     custom={i}
                     whileHover={{ scale: 1.02 }}
+                    style={{ '--tile-index': i }}
                   >
                     <img src={src} alt={`${section.title} ${i + 1}`} loading="lazy" />
                     <figcaption>{section.title}</figcaption>
@@ -155,6 +160,7 @@ export default function GalleryPage() {
                     viewport={{ amount: 0.2, once: true }}
                     custom={i}
                     whileHover={{ scale: 1.02 }}
+                    style={{ '--tile-index': i }}
                   >
                     <img src={src} alt={`${section.title} ${i + 1}`} loading="lazy" />
                     <figcaption>{section.title}</figcaption>
@@ -162,7 +168,7 @@ export default function GalleryPage() {
                 ))}
               </div>
             )}
-          </section>
+          </motion.section>
         ))}
       </div>
 
@@ -178,7 +184,7 @@ export default function GalleryPage() {
         <p>Contact us to access the full archive or request prints and exhibitions.</p>
         <a className="cta-btn" href="/contact">Get in touch</a>
       </motion.section>
-      
+
     </main>
   );
 }

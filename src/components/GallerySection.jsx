@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const GallerySection = () => {
   // You can replace these with your real gallery images later
   const galleryImages = [
-    { src: "/images/gallery1.jpg", alt: "Dance performance" },
-    { src: "/images/gallery2.jpg", alt: "Music class" },
-    { src: "/images/gallery3.jpg", alt: "Annual day" },
-    { src: "/images/gallery4.jpg", alt: "Students performing" },
-    { src: "/images/gallery5.jpg", alt: "Singing session" },
-    { src: "/images/gallery6.jpg", alt: "Art exhibition" },
+    { src: "src/assets/images/01.jpg", alt: "Dance performance" },
+    { src: "src/assets/images/02 (1).jpg", alt: "Music class" },
+    { src: "src/assets/images/03.jpg", alt: "Annual day" },
+    { src: "src/assets/images/04.jpg", alt: "Students performing" },
+    { src: "src/assets/images/05 (1).png", alt: "Singing session" },
+    { src: "/src/assets/images/pooja vepp 1.jpg", alt: "Art exhibition" },
   ];
 
   return (

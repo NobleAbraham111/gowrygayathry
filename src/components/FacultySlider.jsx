@@ -17,14 +17,14 @@ const FacultySlider = memo(() => {
     const { ref: sliderRef, isInView: sliderInView } = useIntersectionAnimation(0.3);
 
     const members = [
-        { name: "Dr. Meera Nair", img: "/assets/images/04.jpg", title: "Dean" },
-        { name: "Arun Krishnan", img: "/assets/images/faculty2.jpg", title: "Sculpture" },
-        { name: "Riya Thomas", img: "/assets/images/faculty3.jpg", title: "Painting" },
-        { name: "Vikram Menon", img: "/assets/images/faculty4.jpg", title: "Digital Arts" },
-        { name: "Sneha Pillai", img: "/assets/images/23.png", title: "Photography" },
-        { name: "Anand Raj", img: "/assets/images/04.jpg", title: "Sketching" },
-        { name: "Leena Joseph", img: "/assets/images/faculty7.jpg", title: "Visual Design" },
-        { name: "Manu Dev", img: "/assets/images/faculty8.jpg", title: "Art History" },
+        { name: "Athira Kaimal ", img: "src/assets/Faculty/Athira Kaimal fac.jpg", title: "Office Administrator" },
+        { name: "P. Muralikrishnan ", img: "src/assets/Faculty/P. Muralikrishnan.jpg", title: "Mridangam Instructor" },
+        { name: "Sudheerkumar ", img: "src/assets/Faculty/Sudheerkumar fac.jpg", title: "Violin Instructor" },
+        { name: "Reji TV", img: "src/assets/Faculty/Reji TV fac.jpg", title: "Carnatic Music Instructor" },
+        { name: "Vijayakumar T N", img: "src/assets/Faculty/Vijay Kumar TN fac.jpg", title: "Drums Instructor" },
+        { name: "Aromal Vijay", img: "src/assets/Faculty/Aromal Vijay fac.jpg", title: "Drums Instructor" },
+        { name: "Lakshmi Velayudhan ", img: "src/assets/Faculty/Lakshmi Velayudhan fac.jpg", title: "Bharatanatyam Instructor" },
+        { name: "Prasanth Kumar P C", img: "src/assets/Faculty/prashanth fac.jpg", title: "Piano & Keyboard Instructor" },
     ];
 
     const controls = useAnimation();

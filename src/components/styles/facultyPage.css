@@ -3,6 +3,7 @@
   background: var(--page-bg, #fdfbf6);
   color: var(--text-color, #1c1c1c);
   transition: background 0.4s, color 0.4s;
+  min-height: 100vh;
 }
 
 body.dark-theme .faculty-page {
@@ -13,12 +14,15 @@ body.dark-theme .faculty-page {
 .faculty-header {
   text-align: center;
   margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out;
 }
 
 .faculty-header h1 {
   font-family: "Playfair Display", serif;
   font-size: 2.8rem;
   color: var(--heading-color, #243d7a);
+  margin-bottom: 1rem;
+  animation: slideInFromTop 1.2s ease-out;
 }
 
 .faculty-header p {
@@ -26,49 +30,77 @@ body.dark-theme .faculty-page {
   margin: 0 auto;
   color: var(--text-muted, #555);
   font-size: 1.1rem;
+  animation: fadeIn 1.5s ease-out;
 }
 
 body.dark-theme .faculty-header h1 {
   color: #d4af37;
 }
 
-.founders-section{
-    margin-bottom: 4rem;
-    display: flex;
-    gap: 90px;
-    justify-content: center;
+.founders-section {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeInUp 1s ease-out 0.5s both;
 }
-.keypersons-section{
-    margin-bottom: 4rem;
-   
-    gap: 40px;
-    justify-content: center;
+
+.keypersons-section {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeInUp 1s ease-out 0.7s both;
 }
+
+.keypersons-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--heading-color, #243d7a);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .faculty-section {
   margin-bottom: 4rem;
-    
-    justify-content: center;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.faculty-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--heading-color, #243d7a);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .faculty-grid {
   display: grid;
-    
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
+
 .photo-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   text-align: center;
   padding: 1rem;
+  animation: fadeInScale 0.8s ease-out both;
+  animation-delay: calc(var(--index, 0) * 0.1s);
 }
 
 .photo-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -78,6 +110,11 @@ body.dark-theme .faculty-header h1 {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
 }
 
 .photo-card h4 {
@@ -85,6 +122,11 @@ body.dark-theme .faculty-header h1 {
   font-size: 1.2rem;
   color: #243d7a;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.photo-card:hover h4 {
+  color: #d4a84f;
 }
 
 .card-title {
@@ -92,17 +134,40 @@ body.dark-theme .faculty-header h1 {
   color: #d4a84f;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.photo-card:hover .card-title {
+  color: #243d7a;
 }
 
 .card-description {
   font-size: 0.85rem;
   color: #666;
   line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.photo-card:hover .card-description {
+  color: #333;
 }
 
 .founder-card {
   border: 2px solid #d4a84f;
   background: linear-gradient(135deg, #fdfbf6 0%, #f9f6e8 100%);
+  position: relative;
+}
+
+.founder-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(212, 168, 79, 0.1), transparent);
+  border-radius: 12px;
+  pointer-events: none;
 }
 
 body.dark-theme .photo-card {
@@ -125,4 +190,163 @@ body.dark-theme .card-description {
 body.dark-theme .founder-card {
   background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
   border-color: #d4af37;
+}
+
+body.dark-theme .photo-card:hover h4 {
+  color: #f1c40f;
+}
+
+body.dark-theme .photo-card:hover .card-title {
+  color: #d4af37;
+}
+
+body.dark-theme .photo-card:hover .card-description {
+  color: #eee;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .faculty-page {
+    padding: 2rem 1rem;
+  }
+
+  .faculty-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .faculty-header p {
+    font-size: 1rem;
+  }
+
+  .founders-section,
+  .keypersons-section,
+  .faculty-section {
+    gap: 1.5rem;
+  }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .photo-card {
+    padding: 0.75rem;
+  }
+
+  .photo-card img {
+    height: 180px;
+  }
+
+  .photo-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+
+  .keypersons-section h2,
+  .faculty-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-page {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .faculty-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .faculty-header p {
+    font-size: 0.9rem;
+  }
+
+  .founders-section,
+  .keypersons-section,
+  .faculty-section {
+    gap: 1rem;
+  }
+
+  .faculty-grid {
+    gap: 1rem;
+  }
+
+  .photo-card {
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .photo-card img {
+    height: 150px;
+    border-radius: 6px;
+  }
+
+  .photo-card h4 {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 0.8rem;
+  }
+
+  .card-description {
+    font-size: 0.75rem;
+  }
+
+  .keypersons-section h2,
+  .faculty-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }

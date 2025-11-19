@@ -37,6 +37,7 @@ body.dark-theme {
     padding-bottom: 4rem;
     margin-top: 50px;
     font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    animation: fadeIn 1s ease-out;
 }
 
 /* HERO */
@@ -46,6 +47,7 @@ body.dark-theme {
     background: var(--hero-bg);
     margin-bottom: 2.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    animation: slideInFromTop 1.2s ease-out;
 }
 
 .gallery-hero h1 {
@@ -53,6 +55,7 @@ body.dark-theme {
     font-size: 2.4rem;
     margin: 0 0 .6rem;
     color: var(--text);
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .hero-sub {
@@ -61,6 +64,7 @@ body.dark-theme {
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.6;
+    animation: fadeIn 1.5s ease-out 0.5s both;
 }
 
 /* Sections */
@@ -72,12 +76,15 @@ body.dark-theme {
 
 .gallery-section {
     margin-bottom: 3.5rem;
+    animation: fadeInUp 1s ease-out both;
+    animation-delay: calc(var(--section-index, 0) * 0.2s);
 }
 
 /* Section header */
 .section-header {
     text-align: left;
     margin-bottom: 1rem;
+    animation: fadeInLeft 0.8s ease-out;
 }
 
 .section-header h2 {
@@ -85,12 +92,25 @@ body.dark-theme {
     font-size: 1.6rem;
     margin-bottom: 0.25rem;
     color: var(--text);
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    animation: growWidth 0.8s ease-out 0.5s both;
 }
 
 .section-header p {
     color: var(--muted);
     margin: 0;
     font-size: 0.95rem;
+    animation: fadeIn 1s ease-out 0.7s both;
 }
 
 /* Masonry-like grid */
@@ -107,9 +127,12 @@ body.dark-theme {
     overflow: hidden;
     box-shadow: 0 8px 20px var(--tile-shadow);
     transform-origin: center;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
     display: flex;
     flex-direction: column;
+    animation: fadeInScale 0.8s ease-out both;
+    animation-delay: calc(var(--tile-index, 0) * 0.1s);
+    cursor: pointer;
 }
 
 /* Horizontal slider tile uses the same tile class with modified sizing */
@@ -118,6 +141,11 @@ body.dark-theme {
     max-width: 360px;
     margin-right: 0.8rem;
     flex: 0 0 auto;
+}
+
+.gallery-tile:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px var(--tile-shadow);
 }
 
 /* image */
@@ -130,13 +158,18 @@ body.dark-theme {
 }
 
 .gallery-tile:hover img {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .gallery-tile figcaption {
     padding: 0.8rem 1rem;
     color: var(--muted);
     font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.gallery-tile:hover figcaption {
+    color: var(--accent);
 }
 
 /* Horizontal slider container */
@@ -148,6 +181,11 @@ body.dark-theme {
     cursor: grab;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.horizontal-slider:active {
+    cursor: grabbing;
 }
 
 /* CTA Section */
@@ -159,17 +197,20 @@ body.dark-theme {
     border-radius: 14px;
     background: linear-gradient(180deg, rgba(212, 168, 79, 0.08), rgba(36, 61, 122, 0.02));
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    animation: fadeInUp 1s ease-out;
 }
 
 .gallery-cta h3 {
     font-family: "Playfair Display", serif;
     margin-bottom: 0.4rem;
     color: var(--text);
+    animation: fadeIn 1s ease-out 0.2s both;
 }
 
 .gallery-cta p {
     color: var(--muted);
     margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out 0.4s both;
 }
 
 .cta-btn {
@@ -180,12 +221,102 @@ body.dark-theme {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-btn:hover::before {
+    left: 100%;
 }
 
 .cta-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 20px rgba(36, 61, 122, 0.18);
+    background: linear-gradient(90deg, #243D7A, var(--accent));
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes growWidth {
+    from { width: 0; }
+    to { width: 50px; }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
 }
 
 /* Responsive changes */
@@ -206,6 +337,14 @@ body.dark-theme {
         min-width: 260px;
         max-width: 300px;
     }
+
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -219,9 +358,37 @@ body.dark-theme {
 
     .masonry-grid {
         gap: 0.8rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
     .gallery-tile img {
         height: 150px;
+    }
+
+    .horizontal-tile {
+        min-width: 220px;
+        max-width: 250px;
+    }
+
+    .gallery-tile figcaption {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-header p {
+        font-size: 0.85rem;
+    }
+
+    .gallery-cta {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .cta-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
