@@ -1,6 +1,6 @@
 // src/components/FeaturedCoursesSection.jsx (Combined file)
 
-import React, { memo, useMemo } from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 // Removed import for CourseCard
 import LazyImage from "./LazyImage"; // Still needed for the card's image
@@ -70,7 +70,7 @@ const featuredCourses = [
 // --- End of data ---
 
 
-const FeaturedCoursesSection = memo(() => {
+const FeaturedCoursesSection = () => {
   const { ref: coursesRef, isInView: coursesInView } = useIntersectionAnimation(0.2);
   const memoizedCourses = useMemo(() => featuredCourses, []);
 
@@ -95,7 +95,7 @@ const FeaturedCoursesSection = memo(() => {
       <div className="course-content">
         <h3 id={`course-${course.id}-title`}>{course.title}</h3>
         {/* We use shortDesc for the featured section view */}
-        <p>{course.shortDesc}</p> 
+        <p>{course.shortDesc}</p>
       </div>
     </motion.article>
   );
@@ -162,6 +162,6 @@ const FeaturedCoursesSection = memo(() => {
       </motion.div>
     </motion.section>
   );
-});
+};
 
-export default FeaturedCourses;
+export default FeaturedCoursesSection;
