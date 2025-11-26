@@ -2,11 +2,10 @@
 
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-// Removed import for CourseCard
-import LazyImage from "./LazyImage"; // Still needed for the card's image
+import LazyImage from "./LazyImage";
 import { staggerContainerVariants, staggerItemVariants, hoverVariants } from "../animations/variants";
 import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
-import "./Courses.css"; // Assuming this styles the grid and cards
+import "../pages/Courses.css"; // Assuming this styles the grid and cards
 
 // --- Data moved from Home.jsx ---
 const featuredCourses = [

@@ -105,8 +105,9 @@ body.dark-theme .faculty-header h1 {
 }
 
 .photo-card img {
+
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -175,15 +176,15 @@ body.dark-theme .photo-card {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-theme .photo-card h4 {
+body.dark-theme .photo-overlay h4 {
   color: #d4af37;
 }
 
-body.dark-theme .card-title {
+body.dark-theme .photo-overlay .card-title {
   color: #f1c40f;
 }
 
-body.dark-theme .card-description {
+body.dark-theme .photo-overlay .card-description {
   color: #ccc;
 }
 
@@ -273,22 +274,22 @@ body.dark-theme .photo-card:hover .card-description {
   }
 
   .photo-card {
+    height: 250px;
+  }
+
+  .photo-overlay {
     padding: 0.75rem;
   }
 
-  .photo-card img {
-    height: 180px;
-  }
-
-  .photo-card h4 {
+  .photo-overlay h4 {
     font-size: 1.1rem;
   }
 
-  .card-title {
+  .photo-overlay .card-title {
     font-size: 0.85rem;
   }
 
-  .card-description {
+  .photo-overlay .card-description {
     font-size: 0.8rem;
   }
 
@@ -327,9 +328,8 @@ body.dark-theme .photo-card:hover .card-description {
     border-radius: 8px;
   }
 
-  .photo-card img {
-    height: 150px;
-    border-radius: 6px;
+  .photo-card {
+    height: 200px;
   }
 
   .photo-card h4 {
