@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ThemeToggle from "./components/ThemeToggle";
 import ScrollToTop from "./components/ScrollToTop";
-import "./App.css";
+import "./app.css";
 
 // Lazy load pages for code-splitting
 const Home = lazy(() => import("./pages/Home"));
