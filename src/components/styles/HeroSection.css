@@ -3,28 +3,30 @@
     position: relative;
     height: 100%;
     overflow: hidden;
-    margin-bottom: 80px;
-    padding: 0 10px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    
+    
 }
 
 @media (max-width: 480px) {
     .hero-section {
         height: auto;
         /* Ensure it doesn't overflow */
-        margin-top: 60px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-       
+        align-items: center;
 
     }
 }
 
 
 .hero-image {
-    margin-top: 30px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     filter: brightness(100%) contrast(115%) sepia(15%) saturate(120%) hue-rotate(0deg);
 }
 
@@ -41,7 +43,7 @@
 @media (max-width: 480px) {
     .hero-image {
         height: auto;
-        padding-top: 45px;
+        padding-top: 26px;
         border-radius: 12px;
         
         /* Ensure it doesn't overflow */
@@ -79,20 +81,18 @@
 
 @media (max-width: 480px) {
     .hero-text {
-        bottom: 0%;
-        /* Further adjust position */
-        left: 5%;
-        /* Keep consistent left margin */
+        position: relative;
+        bottom: auto;
+        left: auto;
+        background: transparent;
+        color: #333;
         max-width: 95%;
-        /* Allow full width for text */
-        padding: 0.5rem 0.8rem;
-        /* Further reduce padding */
+        padding: 1rem 0.8rem;
         font-size: 1.4rem;
-        /* Adjust font size for readability */
+        text-align: center;
+        margin-top: 1rem;
     }
 .hero-text h1 {
-
-    
     /* Responsive font size */
     margin-bottom: 0.5rem;
     font-size: 1.5rem;

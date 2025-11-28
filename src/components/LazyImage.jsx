@@ -10,7 +10,7 @@ const LazyImage = ({ src, alt, className, ...props }) => {
       className={className}
       effect="blur"
       threshold={100}
-      placeholderSrc="/placeholder.jpg" // Optional: add a placeholder image
+      placeholderSrc="src/placeholder.jpg" // Optional: add a placeholder image
       {...props}
     />
   );

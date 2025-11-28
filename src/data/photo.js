@@ -1,7 +1,7 @@
 // You can expand this list as you add more photos
 const photos = [
   {
-    src: "src/assets/images/03.jpg",
+    src: "/assets/images/03.jpg",
     alt: "Painting 1",
     title: "Sunset over Hills",
   },

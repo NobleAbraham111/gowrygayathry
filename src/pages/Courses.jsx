@@ -5,7 +5,6 @@ import CourseCard from "../components/CourseCard";
 import { staggerContainerVariants, staggerItemVariants } from "../animations/variants";
 import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
 import bharatanatyamImage from "../assets/courses/Bharathanatyam.png";
-import mohiniyattamImage from "../assets/courses/3dance.png";
 
 import "./Courses.css";
 
@@ -20,17 +19,16 @@ const courses = [
     image: bharatanatyamImage,
   },
   {
-    id: "mohiniyattam",
-    title: "Mohiniyattam",
-    shortDesc:
-      "The graceful dance of Kerala that celebrates femininity and devotion.",
+    id: "violine",
+    title: "Violine",
+    
     longDesc:
-      "Mohiniyattam, the classical dance of Kerala, is known for its gentle swaying movements and expressions of love and devotion. This course offers a deep dive into lasya, adavus, and choreography based on traditional literature and music, preserving the elegance and emotional storytelling that define this art form.",
-    image: mohiniyattamImage,
+      "Our Violin course emphasizes mastering melody, pitch, and emotional expression. Students learn foundational bowing techniques, finger placement, and swaras to build precision and fluid musicality. The program nurtures both technical skill and a deep connection to the classical music tradition, helping learners express ragas with clarity, devotion, and artistry",
+    image: "src/assets/courses/1guitar.png",
   },
   {
     id: "carnaticmusic",
-    title: " Vocal Music",
+    title: "  Carnatic Music",
     shortDesc:
       "Master the melody and rhythm of South Indian classical music.",
     longDesc:
@@ -51,18 +49,10 @@ const courses = [
     shortDesc:
       "String instrument that resonates with the soul of Indian tradition.",
     longDesc:
-      "The Veena course covers techniques of plucking, fingering, gamakas, and raga interpretation. Students learn both traditional compositions and modern innovations, developing deep melodic understanding and stage confidence under expert tutelage.",
+      "Our Drums course focuses on developing rhythm, timing, and dynamic control. Students train in essential stick techniques, coordination exercises, and rhythmic patterns to strengthen their sense of tempo and musical energy. The program builds technical confidence while fostering creativity, allowing learners to perform with power, discipline, and expressive groove",
     image: "src/assets/courses/23.png",
   },
-  {
-    id: "drawingpainting",
-    title: "Drawing & Painting",
-    shortDesc:
-      "Express creativity through color, form, and imagination.",
-    longDesc:
-      "This course nurtures artistic creativity in students by teaching drawing fundamentals, watercolor, oil painting, and mixed media. Learners explore both traditional Indian art and modern techniques, focusing on perspective, composition, and color theory.",
-    image: "src/assets/courses/1guitar.png",
-  },
+  
   {
     id: "keyboard",
     title: "Keyboard & Piano",
@@ -103,7 +93,7 @@ function Courses() {
       <motion.section
         variants={staggerItemVariants}
       >
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quia aliquid consequuntur temporibus incidunt excepturi, non nam obcaecati voluptas quidem neque similique omnis esse? Commodi itaque error cumque perferendis fuga!</p>
+        
       </motion.section>
 
       <motion.div

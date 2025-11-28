@@ -11,18 +11,7 @@ import "../components/styles/GalleryPage.css";
  */
 
 const SECTIONS = [
-  {
-    key: "finearts",
-    title: "Fine Arts",
-    subtitle: "Paintings, sketches and studio works",
-    images: [
-      "/assets/gallery/finearts/fine1.jpg",
-      "/assets/gallery/finearts/fine2.jpg",
-      "/assets/gallery/finearts/fine3.jpg",
-      "/assets/gallery/finearts/fine4.jpg",
-      "/assets/gallery/finearts/fine5.jpg",
-    ],
-  },
+  
   {
     key: "performing",
     title: "Performing Arts",

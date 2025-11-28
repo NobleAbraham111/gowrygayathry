@@ -1,13 +1,10 @@
-import React, { memo, useCallback } from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { FaInstagram, FaFacebook, FaTwitter, FaWhatsapp, FaArrowUp } from "react-icons/fa";
 import { fadeInVariants, hoverVariants, staggerContainerVariants } from "../animations/variants";
 import "./styles/Footer.css";
 
 const Footer = memo(() => {
-  const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
 
   return (
     <motion.footer

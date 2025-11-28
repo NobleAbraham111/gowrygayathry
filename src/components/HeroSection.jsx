@@ -1,23 +1,22 @@
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/HeroSection.css";
 
 
 const HeroSection = memo(() => {
-    const { ref, opacity, scale, y } = useScrollAnimation();
+    const { ref, isInView } = useIntersectionAnimation(0.1, false);
 
     return (
         <motion.section
             ref={ref}
-            style={{ opacity, scale, y }}
             className="hero-section"
             variants={fadeInVariants}
-            initial="visible"
-            animate="visible"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
         >
             <LazyImage
                 src="src/assets/images/11dance.png"

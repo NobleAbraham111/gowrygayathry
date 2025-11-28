@@ -34,11 +34,11 @@ function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <div className="info-card">
           <h3>Email</h3>
-          <a href="mailto:info@gowrygayathry.com">info@gowrygayathry.com</a>
+          <a href="mailto:info@gowrygayathry.com">gowrygayathry@gmail.com</a>
         </div>
 
         <div className="info-card">
@@ -61,8 +61,8 @@ function Contact() {
           <h3>Address</h3>
           <p>
             GowryGayathry Vidyapeedom,<br />
-            Kalpetta, Wayanad,<br />
-            Kerala, India - 673121
+            Vaikom,Kottayam<br />
+            Kerala, India -686141
           </p>
         </div>
       </motion.div>
@@ -71,9 +71,8 @@ function Contact() {
       <motion.div
         className="map-container"
         initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
       >
         <iframe
           title="map"

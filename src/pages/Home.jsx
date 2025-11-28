@@ -16,7 +16,6 @@ const Home = () => {
       <FeaturedCourses />
       <FacultySlider />
       <GallerySection />
-      <WhatsAppButton number="+919446560812" message="Hello, I want to know more about the courses" />
     </>
   );
 };

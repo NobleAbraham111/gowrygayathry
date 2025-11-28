@@ -12,7 +12,7 @@ function FacultyPage() {
     {
       name: "Harikrishnan B",
       title: "Founder",
-      image: "/assets/images/founder1.jpg",
+      image: "src/assets/Faculty/Harikrishnan founder.jpeg",
       description:
         "Visionary founder who established Gowry Gayathry Vidyapeedom with the dream of preserving Kerala’s cultural artistry. A lifelong supporter of traditional and modern fine arts.",
       isFounder: true,
@@ -20,7 +20,7 @@ function FacultyPage() {
     {
       name: "Mrs. Bindu K R",
       title: "Director & Manager ",
-      image: "/assets/images/founder2.jpg",
+      image: "src/assets/Faculty/Bindu founder.jpeg",
       description:
         "An inspiring leader and the heart of Gowry Gayathry Vidyapeedom, nurturing both faculty and students alike. Her focus on creative growth has shaped generations of artists.",
       isFounder: true,

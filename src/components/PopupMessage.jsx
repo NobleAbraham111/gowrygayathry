@@ -38,8 +38,9 @@ function PopupMessage() {
               ×
             </button>
             <h3>Announcement!</h3>
-            <p>The admissions are open go ahead and checkout our courses .</p>
-            <section><WhatsAppButton/></section>
+            <p>Site Under maintenance</p>
+            
+            <section><WhatsAppButton/></section> 
             
           </motion.div>
         </motion.div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, memo, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 // Assuming the first ref returned is a function/object for scroll animation
-import { useScrollAnimation, useIntersectionAnimation } from "../hooks/useScrollAnimation"; 
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/FacultySlider.css";
@@ -13,8 +13,7 @@ const FacultySlider = memo(() => {
     // If 'ref' from the hook is meant to be a *function* for observation, 
     // it likely conflicts with an internal variable named 'sectionRef' or the destructuring is incorrect.
     // Using a different name like 'scrollRef' resolves the naming conflict.
-    const { ref: scrollRef, opacity, scale, y } = useScrollAnimation(); 
-    const { ref: sliderRef, isInView: sliderInView } = useIntersectionAnimation(0.3);
+    const { ref: scrollRef, opacity, scale, y } = useScrollAnimation();
 
     const members = [
         { name: "Athira Kaimal ", img: "src/assets/Faculty/Athira Kaimal fac.jpg", title: "Office Administrator" },
