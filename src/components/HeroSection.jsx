@@ -5,6 +5,7 @@ import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/HeroSection.css";
+import dance from "/assets/images/11dance.png";
 
 
 const HeroSection = memo(() => {
@@ -19,7 +20,7 @@ const HeroSection = memo(() => {
             animate={isInView ? "visible" : "hidden"}
         >
             <LazyImage
-                src="src/assets/images/11dance.png"
+                src={dance}
                 alt="School of Music and Dance"
                 className="hero-image"
             />

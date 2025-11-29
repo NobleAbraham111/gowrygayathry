@@ -5,7 +5,7 @@ import CourseCard from "../components/CourseCard";
 import { staggerContainerVariants, staggerItemVariants } from "../animations/variants";
 import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
 import bharatanatyamImage from "../assets/courses/Bharathanatyam.png";
-
+import guitar from "src/assets/courses/guitar.png"
 import "./Courses.css";
 
 const courses = [
@@ -69,7 +69,7 @@ const courses = [
       "Master the strings with classical and contemporary playing techniques.",
     longDesc:
       "This course teaches acoustic and classical guitar fundamentals — chords, rhythm patterns, and melodic solos. Students also explore Indian film music and devotional compositions, blending global and local sounds beautifully.",
-    image: "src/assets/courses/guitar.png",
+    image: guitar,
   },
 ];
 

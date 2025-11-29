@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/Navbar.css";
+import reallogo from "/assets/images/reallogo.jpg";
 
 const Navbar = memo(() => {
     const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ const Navbar = memo(() => {
                 {/* Logo / Brand */}
                 <Link to="/" className="logo">
                     <img
-                        src="src/assets/images/reallogo.jpg"
+                        src={reallogo}
                         alt="GowryGayathry logo"
                         className="logo-image"
                     />

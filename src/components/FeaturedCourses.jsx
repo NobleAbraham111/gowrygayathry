@@ -7,6 +7,8 @@ import { staggerContainerVariants, staggerItemVariants, hoverVariants } from "..
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import "../pages/Courses.css"; // Assuming this styles the grid and cards
 
+import bharathanatyam from "../assets/courses/Bharathanatyam.png"
+import violin from "../assets/courses/1guitar.png";
 // --- Data moved from Home.jsx ---
 const featuredCourses = [
   {
@@ -14,15 +16,14 @@ const featuredCourses = [
     title: "Bharatanatyam",
     shortDesc: "Classical Indian dance that embodies rhythm, devotion, and expression.",
     longDesc: "Our Bharatanatyam course focuses on the essence of Nritta (pure dance), Nritya (expressive dance), and Natya (dramatic storytelling). Students are trained in traditional adavus, mudras, and abhinaya to cultivate grace, rhythm, and bhava. The program nurtures both technique and spiritual connection to the art.",
-    image: "src/assets/courses/Bharathanatyam.png",
+    image: bharathanatyam,
   },
   {
     id: "Violin",
     title: "Violin",
     shortDesc: "A versatile instrument that brings emotion and melody to every performance.",
     longDesc: "Our Violin program covers bowing techniques, fingering, and foundational music theory. Students learn classical, devotional, and contemporary pieces that enhance precision, rhythm, and musical expression.",
-
-    image: "src/assets/courses/1guitar.png",
+    image: violin,
   },
   {
     id: "carnatic Music",
@@ -36,7 +37,7 @@ const featuredCourses = [
     title: "Mridangam",
     shortDesc: "The heartbeat of Carnatic rhythm — percussion with precision.",
     longDesc: "Students are trained in tala structures, korvais, and accompaniment techniques for vocal and instrumental concerts. The course emphasizes hand coordination, rhythmic improvisation, and the art of enhancing live performances through dynamic rhythm play.",
-    image: "src/assets/courses/mridangam.jpg",
+    image: "/assets/courses/mridangam.jpg",
   },
   {
     id: "Drums",
@@ -58,7 +59,7 @@ const featuredCourses = [
     title: "Guitar",
     shortDesc: "Master the strings with classical and contemporary playing techniques.",
     longDesc: "This course teaches acoustic and classical guitar fundamentals — chords, rhythm patterns, and melodic solos. Students also explore Indian film music and devotional compositions, blending global and local sounds beautifully.",
-    image: "src/assets/courses/guitar.png",
+    image: "/assets/courses/guitar.png",
   },
 ];
 // --- End of data ---
