@@ -11,7 +11,7 @@ import athira from "../assets/Faculty/Athira Kaimal fac.jpg";
 import murali from "../assets/Faculty/P. Muralikrishnan.jpg";
 import sudheer from "../assets/Faculty/Sudheerkumar fac.jpg";
 import reji from "../assets/Faculty/Reji TV fac.jpg";
-import vijaykumar from "src/assets/Faculty/Vijay Kumar TN fac.jpg";
+import vijaykumar from "../assets/Faculty/Vijay Kumar TN fac.jpg";
 import aromalvijay from  "../assets/Faculty/Aromal Vijay fac.jpg";
 import Lakshmi from "../assets/Faculty/Lakshmi Velayudhan fac.jpg";
 import prasanth from "../assets/Faculty/prashanth fac.jpg";
