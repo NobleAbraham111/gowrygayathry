@@ -6,7 +6,17 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/FacultySlider.css";
-import athira from "../assets/Faculty/Athira Kaimal fac.jpg"
+
+import athira from "../assets/Faculty/Athira Kaimal fac.jpg";
+import murali from "../assets/Faculty/P. Muralikrishnan.jpg";
+import sudheer from "../assets/Faculty/Sudheerkumar fac.jpg";
+import reji from "../assets/Faculty/Reji TV fac.jpg";
+import vijaykumar from "src/assets/Faculty/Vijay Kumar TN fac.jpg";
+import aromalvijay from  "../assets/Faculty/Aromal Vijay fac.jpg";
+import Lakshmi from "../assets/Faculty/Lakshmi Velayudhan fac.jpg";
+import prasanth from "../assets/Faculty/prashanth fac.jpg";
+
+
 
 const FacultySlider = memo(() => {
     // 💡 FIX APPLIED HERE: Renamed 'ref' to 'scrollRef'. 
@@ -25,43 +35,43 @@ const FacultySlider = memo(() => {
 
         {
             name: "P. Muralikrishnan ",
-            img: "../assets/Faculty/P. Muralikrishnan.jpg",
+            img: murali,
             title: "Mridangam Instructor"
         },
 
         {
             name: "Sudheerkumar ",
-            img: "../assets/Faculty/Sudheerkumar fac.jpg",
+            img: sudheer,
             title: "Violin Instructor"
         },
 
         {
             name: "Reji TV",
-            img: "../assets/Faculty/Reji TV fac.jpg",
+            img: reji,
             title: "Carnatic Music Instructor"
         },
 
         {
             name: "Vijayakumar T N",
-            img: "src/assets/Faculty/Vijay Kumar TN fac.jpg",
+            img: vijaykumar,
             title: "Drums Instructor"
         },
 
         {
             name: "Aromal Vijay",
-            img: "../assets/Faculty/Aromal Vijay fac.jpg",
+            img: aromalvijay,
             title: "Drums Instructor"
         },
 
         {
             name: "Lakshmi Velayudhan ",
-            img: "../assets/Faculty/Lakshmi Velayudhan fac.jpg",
+            img: Lakshmi,
             title: "Bharatanatyam Instructor"
         },
 
         {
             name: "Prasanth Kumar P C",
-            img: "../assets/Faculty/prashanth fac.jpg",
+            img: prasanth,
             title: "Piano & Keyboard Instructor"
         },
     ];
