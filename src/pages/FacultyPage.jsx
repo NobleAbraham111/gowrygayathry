@@ -10,7 +10,7 @@ import "../components/styles/facultyPage.css";
 //images
 import harikrishnan from "../assets/Faculty/Harikrishnan founder.jpeg";
 import bindu from "../assets/Faculty/Bindu founder.jpeg";
-import Athira from "../assets/faculty/Athira Kaimal fac.jpg";
+import athira from "../assets/Faculty/Athira Kaimal fac.jpg";
 import prasanth from "../assets/faculty/prashanth fac.jpg";
 import Lakshmi from "../assets/faculty/Lakshmi Velayudhan fac.jpg";
 import Aromal from "../assets/faculty/Aromal Vijay fac.jpg";
@@ -44,7 +44,7 @@ function FacultyPage() {
     {
       name: "Athira Kaimal ",
       title: "Office Administrator",
-      image: Athira,
+      image: athira,
       description:
         "Athira Kaimal serves as the Office Administrator, bringing 10 years of experience in educational administration. She holds a postgraduate degree in History from Sree Sankara University of Sanskrit, and completed her degree from NSS College. With a decade of experience as a receptionist at Gowrygayathri Vidhyapeedom in Vaikom, Athira ensures smooth daily operations and provides warm, efficient support to students, parents, and faculty.",
     }
