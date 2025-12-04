@@ -5,7 +5,12 @@ import CourseCard from "../components/CourseCard";
 import { staggerContainerVariants, staggerItemVariants } from "../animations/variants";
 import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
 import bharatanatyamImage from "../assets/courses/Bharathanatyam.png";
-import guitar from "src/assets/courses/guitar.png"
+import guitar from "../assets/courses/guitar.png";
+import violineImage from "../assets/courses/1guitar.png";
+import carnaticImage from "../assets/courses/song practice.jpg";
+import mridangamImage from "../assets/courses/mridangam.jpg";
+import drumsImage from "../assets/courses/23.png";
+import keyboardImage from "../assets/courses/pooja vepp.jpg";
 import "./Courses.css";
 
 const courses = [
@@ -21,10 +26,10 @@ const courses = [
   {
     id: "violine",
     title: "Violine",
-    
+
     longDesc:
       "Our Violin course emphasizes mastering melody, pitch, and emotional expression. Students learn foundational bowing techniques, finger placement, and swaras to build precision and fluid musicality. The program nurtures both technical skill and a deep connection to the classical music tradition, helping learners express ragas with clarity, devotion, and artistry",
-    image: "src/assets/courses/1guitar.png",
+    image: violineImage,
   },
   {
     id: "carnaticmusic",
@@ -33,7 +38,7 @@ const courses = [
       "Master the melody and rhythm of South Indian classical music.",
     longDesc:
       "This course introduces students to the fundamentals of Carnatic music — swaras, ragas, and talas. With an emphasis on voice culture, compositions, and improvisation (manodharma), learners gain a strong foundation in both traditional kritis and performance skills guided by seasoned vocalists.",
-    image: "src/assets/courses/song practice.jpg",
+    image: carnaticImage,
   },
   {
     id: "mridangam",
@@ -41,7 +46,7 @@ const courses = [
     shortDesc: "The heartbeat of Carnatic rhythm — percussion with precision.",
     longDesc:
       "Students are trained in tala structures, korvais, and accompaniment techniques for vocal and instrumental concerts. The course emphasizes hand coordination, rhythmic improvisation, and the art of enhancing live performances through dynamic rhythm play.",
-    image: "src/assets/courses/mridangam.jpg",
+    image: mridangamImage,
   },
   {
     id: "drums",
@@ -50,7 +55,7 @@ const courses = [
       "String instrument that resonates with the soul of Indian tradition.",
     longDesc:
       "Our Drums course focuses on developing rhythm, timing, and dynamic control. Students train in essential stick techniques, coordination exercises, and rhythmic patterns to strengthen their sense of tempo and musical energy. The program builds technical confidence while fostering creativity, allowing learners to perform with power, discipline, and expressive groove",
-    image: "src/assets/courses/23.png",
+    image: drumsImage,
   },
   
   {
@@ -60,7 +65,7 @@ const courses = [
       "Learn melodies and harmonies that blend tradition and modern music.",
     longDesc:
       "A structured program introducing Western notation, scales, chords, and improvisation. Students explore devotional, classical, and fusion styles, enhancing their sense of pitch, rhythm, and musical expression through hands-on practice.",
-    image: "src/assets/courses/pooja vepp.jpg",
+    image: keyboardImage,
   },
   {
     id: "guitar",
