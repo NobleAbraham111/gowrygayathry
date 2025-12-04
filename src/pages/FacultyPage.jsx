@@ -12,7 +12,7 @@ import harikrishnan from "../assets/Faculty/Harikrishnan founder.jpeg";
 import bindu from "../assets/Faculty/Bindu founder.jpeg";
 import AthiraImage from "../assets/faculty/Athira Kaimal fac.jpg";
 
-import prasanth from "../assets/faculty/prashanth fac.jpg";
+import prashanth from "../assets/faculty/prashanth fac.jpg";
 import Lakshmi from "../assets/faculty/Lakshmi Velayudhan fac.jpg";
 import Aromal from "../assets/faculty/Aromal Vijay fac.jpg";
 import Vijaykumar from "../assets/faculty/Vijay Kumar TN fac.jpg";
@@ -53,9 +53,9 @@ function FacultyPage() {
 
   const facultyMembers = [
     {
-      name: "Prasanth Kumar P C",
+      name: "Prashanth Kumar P C",
       title: " Piano & Keyboard Instructor",
-      image: prasanth,
+      image: prashanth,
       description:
         "Prasanth Kumar P C has been teaching piano and keyboard for over 20 years. He holds an 8th Grade certificate from Trinity College London and has taught at several well-known schools in Kerala. Currently teaching at Rajagiri Amala Public School and Fatima Central School, Prasanth is dedicated to helping students discover and develop their musical talents with patience and expertise.",
     },
