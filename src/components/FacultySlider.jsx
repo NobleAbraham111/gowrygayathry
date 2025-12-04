@@ -6,6 +6,7 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/FacultySlider.css";
+import athira from "../assets/Faculty/Athira Kaimal fac.jpg"
 
 const FacultySlider = memo(() => {
     // 💡 FIX APPLIED HERE: Renamed 'ref' to 'scrollRef'. 
@@ -18,7 +19,7 @@ const FacultySlider = memo(() => {
     const members = [
         {
             name: "Athira Kaimal ",
-            img: "../assets/Faculty/Athira Kaimal fac.jpg",
+            img: athira,
             title: "Office Administrator"
         },
 
