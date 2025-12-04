@@ -5,7 +5,7 @@ import CourseCard from "../components/CourseCard";
 import { staggerContainerVariants, staggerItemVariants } from "../animations/variants";
 import { useIntersectionAnimation } from "../hooks/useScrollAnimation";
 import bharatanatyamImage from "../assets/courses/Bharathanatyam.png";
-import guitar from "../assets/courses/guitar.png";
+import guitar from "../assets/courses/1guitar.png";
 import violineImage from "../assets/courses/1guitar.png";
 import carnaticImage from "../assets/courses/song practice.jpg";
 import mridangamImage from "../assets/courses/mridangam.jpg";
