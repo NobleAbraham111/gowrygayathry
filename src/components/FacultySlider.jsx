@@ -16,21 +16,60 @@ const FacultySlider = memo(() => {
     const { ref: scrollRef, opacity, scale, y } = useScrollAnimation();
 
     const members = [
-        { name: "Athira Kaimal ", img: "src/assets/Faculty/Athira Kaimal fac.jpg", title: "Office Administrator" },
-        { name: "P. Muralikrishnan ", img: "src/assets/Faculty/P. Muralikrishnan.jpg", title: "Mridangam Instructor" },
-        { name: "Sudheerkumar ", img: "src/assets/Faculty/Sudheerkumar fac.jpg", title: "Violin Instructor" },
-        { name: "Reji TV", img: "src/assets/Faculty/Reji TV fac.jpg", title: "Carnatic Music Instructor" },
-        { name: "Vijayakumar T N", img: "src/assets/Faculty/Vijay Kumar TN fac.jpg", title: "Drums Instructor" },
-        { name: "Aromal Vijay", img: "src/assets/Faculty/Aromal Vijay fac.jpg", title: "Drums Instructor" },
-        { name: "Lakshmi Velayudhan ", img: "src/assets/Faculty/Lakshmi Velayudhan fac.jpg", title: "Bharatanatyam Instructor" },
-        { name: "Prasanth Kumar P C", img: "src/assets/Faculty/prashanth fac.jpg", title: "Piano & Keyboard Instructor" },
+        {
+            name: "Athira Kaimal ",
+            img: "../assets/Faculty/Athira Kaimal fac.jpg",
+            title: "Office Administrator"
+        },
+
+        {
+            name: "P. Muralikrishnan ",
+            img: "../assets/Faculty/P. Muralikrishnan.jpg",
+            title: "Mridangam Instructor"
+        },
+
+        {
+            name: "Sudheerkumar ",
+            img: "../assets/Faculty/Sudheerkumar fac.jpg",
+            title: "Violin Instructor"
+        },
+
+        {
+            name: "Reji TV",
+            img: "../assets/Faculty/Reji TV fac.jpg",
+            title: "Carnatic Music Instructor"
+        },
+
+        {
+            name: "Vijayakumar T N",
+            img: "src/assets/Faculty/Vijay Kumar TN fac.jpg",
+            title: "Drums Instructor"
+        },
+
+        {
+            name: "Aromal Vijay",
+            img: "../assets/Faculty/Aromal Vijay fac.jpg",
+            title: "Drums Instructor"
+        },
+
+        {
+            name: "Lakshmi Velayudhan ",
+            img: "../assets/Faculty/Lakshmi Velayudhan fac.jpg",
+            title: "Bharatanatyam Instructor"
+        },
+
+        {
+            name: "Prasanth Kumar P C",
+            img: "../assets/Faculty/prashanth fac.jpg",
+            title: "Piano & Keyboard Instructor"
+        },
     ];
 
     const controls = useAnimation();
     const containerRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const isAutoSliding = useRef(true);
-    
+
     // Calculate the width of one card (260px + 2rem gap = 260 + 32 = 292px)
     const slideWidth = 292;
     const totalSlides = members.length;
@@ -53,11 +92,11 @@ const FacultySlider = memo(() => {
     // Animate position when currentIndex changes
     // This is line 86 if you count from the top of the file without imports. 
     // The code here is correct and does not involve sectionRef.
-    useEffect(() => { 
+    useEffect(() => {
         const translateX = -currentIndex * slideWidth;
-        controls.start({ 
-            x: translateX, 
-            transition: { duration: 1.5, ease: [0.4, 0, 0.2, 1] } 
+        controls.start({
+            x: translateX,
+            transition: { duration: 1.5, ease: [0.4, 0, 0.2, 1] }
         });
     }, [currentIndex, controls, slideWidth]);
 
@@ -80,7 +119,7 @@ const FacultySlider = memo(() => {
     return (
         <motion.section
             // 💡 FIX APPLIED HERE: Using the renamed ref 'scrollRef'
-            ref={scrollRef} 
+            ref={scrollRef}
             style={{ opacity, scale, y }}
             className="faculty-section"
             variants={fadeInVariants}
