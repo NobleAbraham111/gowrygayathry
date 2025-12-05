@@ -43,13 +43,13 @@ function Contact() {
 
         <div className="info-card">
           <h3>Phone</h3>
-          <a href="tel:+919876543210">+91 98765 43210</a>
+          <a href="tel:+919876543210">+91 984 729 0806</a>
         </div>
 
         <div className="info-card">
           <h3>WhatsApp</h3>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919847290806"
             target="_blank"
             rel="noopener noreferrer"
           >
