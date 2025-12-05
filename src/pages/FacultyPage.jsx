@@ -8,17 +8,18 @@ import FacultySlider from "../components/FacultySlider";
 import "../components/styles/facultyPage.css";
 
 //images
-import harikrishnan from "../assets/Faculty/Harikrishnan founder.jpeg";
-import bindu from "../assets/Faculty/Bindu founder.jpeg";
-import AthiraImage from "../assets/faculty/Athira Kaimal fac.jpg";
 
-import prashanth from "../assets/faculty/prashanth fac.jpg";
-import Lakshmi from "../assets/faculty/Lakshmi Velayudhan fac.jpg";
-import Aromal from "../assets/faculty/Aromal Vijay fac.jpg";
-import Vijaykumar from "../assets/faculty/Vijay Kumar TN fac.jpg";
-import reji from "../assets/faculty/Reji TV fac.jpg";
-import sudheer from "../assets/faculty/Sudheerkumar fac.jpg";
-import murali from "../assets/faculty/P. Muralikrishnan.jpg";
+import harikrishnan from "../assets/faculty/Harikrishnanfounder.jpeg";
+import bindu from "../assets/faculty/Bindufounder.jpeg";
+import AthiraImage from "../assets/faculty/AthiraKaimalfac.jpg";
+
+import prashanth from "../assets/faculty/prashanthfac.jpg";
+import Lakshmi from "../assets/faculty/LakshmiVelayudhanfac.jpg";
+import Aromal from "../assets/faculty/AromalVijayfac.jpg";
+import Vijaykumar from "../assets/faculty/VijayKumarTNfac.jpg";
+import reji from "../assets/faculty/RejiTVfac.jpg";
+import sudheer from "../assets/faculty/Sudheerkumarfac.jpg";
+import murali from "../assets/faculty/PMuralikrishnan.jpg";
 
 
 function FacultyPage() {
@@ -100,7 +101,7 @@ function FacultyPage() {
       image: murali,
       description:
         "P. Muralikrishnan holds a BA in Mridangam from RLV College Thrippunithura. Trained in the traditional style of this essential percussion instrument, he brings authentic knowledge of rhythm and technique to his students. His education from one of Kerala's respected music institutions ensures students receive quality instruction in classical mridangam playing.",
-      },
+    },
   ];
 
   return (
