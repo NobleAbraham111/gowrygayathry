@@ -11,15 +11,15 @@ import "../components/styles/facultyPage.css";
 
 import harikrishnan from "../assets/faculty/harifounder.jpeg";
 import bindu from "../assets/faculty/Bindufounder.jpeg";
-import aathira from "../assets/faculty/athira.jpg";
+import athira from "../assets/faculty/athira.jpg";
 
-import prashanth from "../assets/faculty/prashanthfac.jpg";
-import Lakshmi from "../assets/faculty/LakshmiVelayudhanfac.jpg";
-import Aromal from "../assets/faculty/AromalVijayfac.jpg";
-import Vijaykumar from "../assets/faculty/VijayKumarTNfac.jpg";
-import reji from "../assets/faculty/RejiTVfac.jpg";
-import sudheer from "../assets/faculty/Sudheerkumarfac.jpg";
 import murali from "../assets/faculty/PMuralikrishnan.jpg";
+import sudheer from "../assets/faculty/Sudheerkumarfac.jpg";
+import reji from "../assets/faculty/RejiTVfac.jpg";
+import vijaykumar from "../assets/faculty/VijayKumarTNfac.jpg";
+import aromalvijay from "../assets/faculty/AromalVijayfac.jpg";
+import Lakshmi from "../assets/faculty/LakshmiVelayudhanfac.jpg";
+import prasanth from "../assets/faculty/prashanthfac.jpg";
 
 
 function FacultyPage() {
@@ -46,7 +46,7 @@ function FacultyPage() {
     {
       name: "Athira Kaimal ",
       title: "Office Administrator",
-      image: aathira,
+      image: athira,
       description:
         "Athira Kaimal serves as the Office Administrator, bringing 10 years of experience in educational administration. She holds a postgraduate degree in History from Sree Sankara University of Sanskrit, and completed her degree from NSS College. With a decade of experience as a receptionist at Gowrygayathri Vidhyapeedom in Vaikom, Athira ensures smooth daily operations and provides warm, efficient support to students, parents, and faculty.",
     }
@@ -56,7 +56,7 @@ function FacultyPage() {
     {
       name: "Prashanth Kumar P C",
       title: " Piano & Keyboard Instructor",
-      image: prashanth,
+      image: prasanth,
       description:
         "Prasanth Kumar P C has been teaching piano and keyboard for over 20 years. He holds an 8th Grade certificate from Trinity College London and has taught at several well-known schools in Kerala. Currently teaching at Rajagiri Amala Public School and Fatima Central School, Prasanth is dedicated to helping students discover and develop their musical talents with patience and expertise.",
     },
@@ -70,14 +70,14 @@ function FacultyPage() {
     {
       name: "Aromal Vijay",
       title: "Drums Instructor",
-      image: Aromal,
+      image: aromalvijay,
       description:
         "Aromal Vijay is an accomplished drummer with over 15 years of experience. He holds an 8th Grade certification in drums from Trinity College London and has won top honors at both MG University and Kerala School youth festivals. As a graduate with extensive performance and teaching experience, Aromal brings energy and technical excellence to his classes, helping students master rhythm and develop their drumming skills.",
     },
     {
       name: "Vijayakumar T N ",
       title: "Drums Instructor",
-      image: Vijaykumar,
+      image: vijaykumar,
       description:
         "Vijayakumar T N is a seasoned percussion artist with over 35 years of performing experience. He currently teaches drums at prestigious institutions including Bharatiya Vidya Bhavan and Rajagiri Amala School. With more than three decades in music, Vijayakumar brings deep knowledge and a wealth of experience to his students, guiding them with patience and expertise honed over years of dedicated practice and performance.",
     },
