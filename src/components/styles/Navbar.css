@@ -20,7 +20,7 @@ nav a {
     position: fixed;
     top: 0;
     z-index: 100;
-    background: #644621;
+    background: #000000;
     backdrop-filter: blur(8px);
     transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease, border 0.3s ease;
     width: 100%;

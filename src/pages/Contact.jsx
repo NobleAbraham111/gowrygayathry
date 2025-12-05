@@ -76,7 +76,7 @@ function Contact() {
       >
         <iframe
           title="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.242551823489!2d76.083!3d11.608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5eeb24b56f123%3A0x8a2!2sKalpetta!5e0!3m2!1sen!2sin!4v1703401234567"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.1190062233964!2d76.39597119999999!3d9.7559861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08792776f72829%3A0xf9d9e4f98f4b1d9e!2sGouri%20Gayarhri%20Vidyapeedom!5e0!3m2!1sen!2sin!4v1764939883759!5m2!1sen!2sin"
           width="100%"
           height="350"
           style={{ border: 0 }}
