@@ -7,14 +7,14 @@ import { fadeInVariants, hoverVariants } from "../animations/variants";
 import LazyImage from "./LazyImage";
 import "./styles/FacultySlider.css";
 
-import athira from "../assets/Faculty/Athira Kaimal fac.jpg";
-import murali from "../assets/Faculty/P. Muralikrishnan.jpg";
-import sudheer from "../assets/Faculty/Sudheerkumar fac.jpg";
-import reji from "../assets/Faculty/Reji TV fac.jpg";
-import vijaykumar from "../assets/Faculty/Vijay Kumar TN fac.jpg";
-import aromalvijay from  "../assets/Faculty/Aromal Vijay fac.jpg";
-import Lakshmi from "../assets/Faculty/Lakshmi Velayudhan fac.jpg";
-import prasanth from "../assets/Faculty/prashanth fac.jpg";
+import athira from "../assets/faculty/athira.jpg";
+import murali from "../assets/faculty/PMuralikrishnan.jpg";
+import sudheer from "../assets/faculty/Sudheerkumarfac.jpg";
+import reji from "../assets/faculty/RejiTVfac.jpg";
+import vijaykumar from "../assets/faculty/VijayKumarTNfac.jpg";
+import aromalvijay from "../assets/faculty/AromalVijayfac.jpg";
+import Lakshmi from "../assets/faculty/LakshmiVelayudhanfac.jpg";
+import prasanth from "../assets/faculty/prashanthfac.jpg";
 
 
 
