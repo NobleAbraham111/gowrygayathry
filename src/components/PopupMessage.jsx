@@ -38,7 +38,7 @@ function PopupMessage() {
               ×
             </button>
             <h3>Announcement!</h3>
-            <p>Site Under maintenance</p>
+            <p>Find more about our Courses</p>
             
             <section><WhatsAppButton/></section> 
             

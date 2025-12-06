@@ -185,6 +185,7 @@ function FacultyPage() {
           <FacultySlider />
         </section>
       </motion.section>
+      <WhatsAppButton/>
     </motion.div>
   );
 }

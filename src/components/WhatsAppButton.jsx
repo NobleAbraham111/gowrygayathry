@@ -17,7 +17,7 @@ const WhatsAppButton = memo(({ number, message }) => {
       role="button"
       tabIndex={0}
     >
-      Enquire Now on WhatsApp
+      WhatsApp 
     </motion.a>
   );
 });
